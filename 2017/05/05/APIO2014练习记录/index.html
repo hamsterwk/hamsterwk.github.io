@@ -1,0 +1,801 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="APIO," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="所有题目都是在uoj上提交完成的。【APIO2014】Palindromes - 题目 - Universal Online Judge【APIO2014】Split the sequence - 题目 - Universal Online Judge【APIO2014】Beads and wires - 题目 - Universal Online Judge Palindromes uoj 10">
+<meta name="keywords" content="APIO">
+<meta property="og:type" content="article">
+<meta property="og:title" content="APIO2014练习记录">
+<meta property="og:url" content="http://yoursite.com/2017/05/05/APIO2014练习记录/index.html">
+<meta property="og:site_name" content="某仓鼠的OI后院">
+<meta property="og:description" content="所有题目都是在uoj上提交完成的。【APIO2014】Palindromes - 题目 - Universal Online Judge【APIO2014】Split the sequence - 题目 - Universal Online Judge【APIO2014】Beads and wires - 题目 - Universal Online Judge Palindromes uoj 10">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/APIO2014/IamSB.png">
+<meta property="og:image" content="http://yoursite.com/images/APIO2014/P104.jpg">
+<meta property="og:updated_time" content="2017-05-26T02:14:14.397Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="APIO2014练习记录">
+<meta name="twitter:description" content="所有题目都是在uoj上提交完成的。【APIO2014】Palindromes - 题目 - Universal Online Judge【APIO2014】Split the sequence - 题目 - Universal Online Judge【APIO2014】Beads and wires - 题目 - Universal Online Judge Palindromes uoj 10">
+<meta name="twitter:image" content="http://yoursite.com/images/APIO2014/IamSB.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/05/05/APIO2014练习记录/"/>
+
+
+
+
+
+  <title> APIO2014练习记录 | 某仓鼠的OI后院 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?f9bfef867c3d97738b815bb8ed77300f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">某仓鼠的OI后院</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">欢迎来玩qwq</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-desktop"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/05/APIO2014练习记录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hamsterwk">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/hamster.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="某仓鼠的OI后院">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                APIO2014练习记录
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-05T08:11:58+08:00">
+                2017-05-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/练习记录/" itemprop="url" rel="index">
+                    <span itemprop="name">练习记录</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="\images\APIO2014\IamSB.png" alt=""><br>所有题目都是在uoj上提交完成的。<br><a href="http://uoj.ac/problem/103" target="_blank" rel="noopener">【APIO2014】Palindromes - 题目 - Universal Online Judge</a><br><a href="http://uoj.ac/problem/104" target="_blank" rel="noopener">【APIO2014】Split the sequence - 题目 - Universal Online Judge</a><br><a href="http://uoj.ac/problem/105" target="_blank" rel="noopener">【APIO2014】Beads and wires - 题目 - Universal Online Judge</a></p>
+<h1 id="Palindromes-uoj-103"><a href="#Palindromes-uoj-103" class="headerlink" title="Palindromes uoj 103"></a>Palindromes uoj 103</h1><p>这题做的时候无限犯二。。。<br>1.第一眼看题，看成“存在值之和”，然后浪费半小时。<br>2.意识到可能需要用马拉车这种东西的时候…突然忘记怎么打。。。<br>3.上午才学完的SAM，居然不知道用。。。</p>
+<p>步入正题：<br>题目要求的是串中回文子串的长度与出现次数。<br>首先，一个串的回文子串数量是$O(n)$级的，这点我们使用manacher时，能拓展R数组的即为本质不同的回文子串，长度此时也是确定的。<br>然后，出现次数…子串的出现次数…我上午才学完的SAM，怎么就忘了呢。。。<br>看到hzwer标签上的“后缀自动机”的时候，顿时感觉自己智商不在线。<br>这样，扔到一个后缀自动机里面去，对自动机每个节点x维护一个$size_x$，然后我们从r对应的节点出发，在parent树上倍增到[l,r]对应的节点，用它的$size*(r-l+1)$更新答案。<br>代码十分丑陋，hzw打的维护size好神奇…<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;complex&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lowbit(x) (x&amp;(-x))</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="keyword">int</span> in[<span class="number">600010</span>][<span class="number">26</span>],fa[<span class="number">600010</span>][<span class="number">25</span>],mx[<span class="number">600010</span>],sz[<span class="number">600010</span>];<span class="keyword">char</span> ch[<span class="number">300010</span>],a[<span class="number">600010</span>];</span><br><span class="line"><span class="keyword">int</span> pl[<span class="number">300010</span>],deep[<span class="number">600010</span>];</span><br><span class="line"><span class="keyword">int</span> last,nn;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;g[<span class="number">600010</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Insert</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> Pl)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> p=last,np=++nn;sz[np]=<span class="number">1</span>;</span><br><span class="line">	last=np;mx[np]=mx[p]+<span class="number">1</span>;pl[Pl]=np;</span><br><span class="line">	<span class="keyword">while</span>(~p&amp;&amp;!in[p][x])in[p][x]=np,p=fa[p][<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">if</span>(p==<span class="number">-1</span>)<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">int</span> q=in[p][x];</span><br><span class="line">	<span class="keyword">if</span>(mx[q]==mx[p]+<span class="number">1</span>)fa[np][<span class="number">0</span>]=q;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> nq=++nn;mx[nq]=mx[p]+<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">26</span>;i++)in[nq][i]=in[q][i];</span><br><span class="line">		fa[nq][<span class="number">0</span>]=fa[q][<span class="number">0</span>];</span><br><span class="line">		fa[np][<span class="number">0</span>]=fa[q][<span class="number">0</span>]=nq;</span><br><span class="line">		<span class="keyword">while</span>(~p&amp;&amp;in[p][x]==q)in[p][x]=nq,p=fa[p][<span class="number">0</span>];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;(<span class="number">1</span>&lt;&lt;i)&lt;=deep[x];i++)&#123;</span><br><span class="line">		fa[x][i]=fa[fa[x][i<span class="number">-1</span>]][i<span class="number">-1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,siz=g[x].size();i&lt;siz;i++)&#123;</span><br><span class="line">		fa[g[x][i]][<span class="number">0</span>]=x;</span><br><span class="line">		deep[g[x][i]]=deep[x]+<span class="number">1</span>;</span><br><span class="line">		dfs(g[x][i]);</span><br><span class="line">		sz[x]+=sz[g[x][i]];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">LL ans=<span class="number">0</span>,R[<span class="number">600010</span>],pos,MR;</span><br><span class="line"><span class="function">LL <span class="title">query</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> j=pl[r];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">20</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">		<span class="keyword">int</span> t=fa[j][i];</span><br><span class="line">		<span class="keyword">if</span>(mx[t]&gt;=(r-l+<span class="number">1</span>))j=t;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> (LL)sz[j]*(r-l+<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">manacher</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		a[i*<span class="number">2</span>]=ch[i];</span><br><span class="line">		a[i*<span class="number">2</span>+<span class="number">1</span>]=<span class="string">'#'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	pos=<span class="number">0</span>,MR=<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>*n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(i&lt;MR)R[i]=min(R[<span class="number">2</span>*pos-i],MR-i);</span><br><span class="line">		<span class="keyword">else</span> R[i]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(i-R[i]+<span class="number">1</span>&gt;=<span class="number">0</span>&amp;&amp;i+R[i]<span class="number">-1</span>&lt;=<span class="number">2</span>*n<span class="number">-2</span>&amp;&amp;a[i+R[i]<span class="number">-1</span>]==a[i-R[i]+<span class="number">1</span>])&#123;</span><br><span class="line">			<span class="keyword">if</span>(a[i+R[i]<span class="number">-1</span>]!=<span class="string">'#'</span>)&#123;</span><br><span class="line">				ans=max(ans,query(i-R[i]+<span class="number">1</span>&gt;&gt;<span class="number">1</span>,i+R[i]<span class="number">-1</span>&gt;&gt;<span class="number">1</span>));</span><br><span class="line">			&#125;R[i]++;</span><br><span class="line">		&#125;R[i]--;</span><br><span class="line">		<span class="keyword">if</span>(R[i]+i<span class="number">-1</span>&gt;MR)&#123;</span><br><span class="line">			pos=i;MR=i+R[i]<span class="number">-1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> WK</span></span><br><span class="line">    freopen(<span class="string">"in.txt"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">    freopen(<span class="string">"out.txt"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s"</span>,ch);n=<span class="built_in">strlen</span>(ch);fa[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)Insert(ch[i]-<span class="string">'a'</span>,i);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=nn;i++)g[fa[i][<span class="number">0</span>]].push_back(i);</span><br><span class="line">    dfs(<span class="number">0</span>);</span><br><span class="line">    manacher();</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="Split-the-sequence-uoj-104"><a href="#Split-the-sequence-uoj-104" class="headerlink" title="Split the sequence uoj 104"></a>Split the sequence uoj 104</h1><p>调这个题疯了。。。<br>直观看上去，就是个DP。<br>$f_{i,j}$表示第j刀剁在i后面的最大收益。<br>容易看出，顺序一定是从左往右（或者从右往左）剁是最优的。<br>记$sum_i$为$\sum_{j=1}^{i}a_j$<br>那么<br>$$f_{i,j}=max((sum_n-sum_i)(sum_i-sum_{k})+f_{k,j-1}),k\in [0,i)$$  </p>
+<p>首先打了个simple的$O(n^2m)$确保公式无误。<br>假设j&gt;k,且取j的决策比取k优秀，那么(以下省略第二维）：<br>$$(sum_n-sum_i)(sum_i-sum_{k})+f_{k}&lt;(sum_n-sum_i)(sum_i-sum_{j})+f_{j}$$<br>然后它就可以变形为一个可斜率优化的式子：<br>$$\frac{f_j-f_k}{sum_j-sum_k}&gt;sum_n-sum_i$$<br>此外额外维护一个数组pre，$pre_{i,j}$表示$f_{i,j}$是由决策$f_{pre_{i,j},j-1}$取到<br>接下来的情节，应该就是直接上斜率优化愉快AC。<br>然而，并不。<br>1.f数组和pre数组如果都开$10^5*200$的话直接MLE，so，f数组要改为滚动数组。（也许是因为我后来发现我SB把pre开成LL了。。。）<br>2.被各种卡常数（我代码一直就常数大QAQ），各种优化才过。。。<br>惨啊。。。  </p>
+<p><img src="\images\APIO2014\P104.jpg" alt=""></p>
+<p>代码各位大佬轻喷。。。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;complex&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lowbit(x) (x&amp;(-x))</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">complex</span>&lt;<span class="keyword">double</span>&gt;E;</span><br><span class="line">LL f[<span class="number">100010</span>][<span class="number">2</span>];<span class="keyword">int</span> pre[<span class="number">100010</span>][<span class="number">210</span>];</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="keyword">int</span> sum[<span class="number">100010</span>];<span class="keyword">int</span> st[<span class="number">100010</span>];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">char</span> ch=getchar();</span><br><span class="line">	<span class="keyword">int</span> rtn=<span class="number">0</span>,f=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (;ch&gt;<span class="string">'9'</span>||ch&lt;<span class="string">'0'</span>;ch=getchar())<span class="keyword">if</span>(ch==<span class="string">'-'</span>)f=<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span> (;ch&lt;=<span class="string">'9'</span>&amp;&amp;ch&gt;=<span class="string">'0'</span>;ch=getchar())rtn=rtn*<span class="number">10</span>+ch-<span class="string">'0'</span>;</span><br><span class="line">	<span class="keyword">return</span> rtn*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">double</span> <span class="title">K</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> t)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (sum[x]==sum[y]) <span class="keyword">return</span> <span class="number">1e9</span>;</span><br><span class="line">	<span class="keyword">return</span> (<span class="keyword">double</span>)(f[x][t]-f[y][t])/(sum[x]-sum[y]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> q[<span class="number">100010</span>],l,r;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> WK</span></span><br><span class="line">    freopen(<span class="string">"in.txt"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">    <span class="comment">//freopen("out.txt","w",stdout);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)sum[i]=sum[i<span class="number">-1</span>]+read();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)f[i][<span class="number">1</span>]=(LL)(sum[n]-sum[i])*(sum[i]);</span><br><span class="line">    <span class="keyword">int</span> last=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">2</span>;j&lt;=m;j++)&#123;</span><br><span class="line">    	r=<span class="number">0</span>;l=<span class="number">1</span>;q[++r]=j<span class="number">-1</span>;</span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> i=j;i&lt;=n;i++)&#123;</span><br><span class="line">    		<span class="keyword">while</span>(r-l&amp;&amp;K(q[l+<span class="number">1</span>],q[l],last)&gt;=sum[n]-sum[i])l++;</span><br><span class="line">    		f[i][last^<span class="number">1</span>]=(LL)(sum[i]-sum[q[l]])*(sum[n]-sum[i])+f[q[l]][last];</span><br><span class="line">    		pre[i][j]=q[l];</span><br><span class="line">    		<span class="keyword">while</span>(r-l&amp;&amp;K(i,q[r],last)&gt;=K(q[r],q[r<span class="number">-1</span>],last))r--;</span><br><span class="line">    		q[++r]=i;</span><br><span class="line">		&#125;last^=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	LL ans=<span class="number">-1e9</span>;<span class="keyword">int</span> mf;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(ans&lt;f[i][last]&amp;&amp;(m==<span class="number">1</span>||~pre[i][m]))&#123;</span><br><span class="line">			ans=f[i][last];</span><br><span class="line">			mf=i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans);</span><br><span class="line">	<span class="keyword">if</span>(!ans)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)<span class="built_in">printf</span>(<span class="string">"%d "</span>,i);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=mf,j=m;;)&#123;</span><br><span class="line">		st[++st[<span class="number">0</span>]]=i;</span><br><span class="line">		i=pre[i][j];j--;</span><br><span class="line">		<span class="keyword">if</span>(!j)<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=st[<span class="number">0</span>];i;i--)<span class="built_in">printf</span>(<span class="string">"%d "</span>,st[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="Beads-and-wires-uoj-105"><a href="#Beads-and-wires-uoj-105" class="headerlink" title="Beads and wires uoj 105"></a>Beads and wires uoj 105</h1><p>这个题挺有趣啊。。。<br>我不停地开脑洞，发现只要给每个节点，要么不匹配，要么匹配父亲与它和它与一个儿子链接的两条蓝边即可符合题意。<br>然后我只会枚举根，$(O(n^2))$滚粗。。。<br>正解…什么鬼…换根DP？<br>学习一下，再做更新QAQ</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>一句话<br><strong>我要是到了APIO2017的考场上怎么办啊QAQ</strong></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/APIO/" rel="tag"># APIO</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/04/manacher学习笔记/" rel="next" title="manacher学习笔记">
+                <i class="fa fa-chevron-left"></i> manacher学习笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/15/APIO&CTSC2017游记/" rel="prev" title="APIO&CTSC2017游记">
+                APIO&CTSC2017游记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  <div class="comments" id="comments">
+    
+      <div id="uyan_frame"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/hamster.jpg"
+               alt="hamsterwk" />
+          <p class="site-author-name" itemprop="name">hamsterwk</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              爱护仓鼠协会名单：
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/ep1c_heret1c/" title="CBH" target="_blank">CBH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://chrt.github.io" title="chrt" target="_blank">chrt</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mywaythere.lofter.com/" title="mywaythere" target="_blank">mywaythere</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://blog.sengxian.com/" title="sengxian" target="_blank">sengxian</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://owarisunezeko.wordpress.com/" title="nonamenotitle" target="_blank">nonamenotitle</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zjyelizaveta.com/" title="ZJYelizaveta" target="_blank">ZJYelizaveta</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://lyc.xuming.studio/" title="TooYoungTooSimp" target="_blank">TooYoungTooSimp</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+		<embed src="\hamster.swf" width="210" height="140"></embed>
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Palindromes-uoj-103"><span class="nav-number">1.</span> <span class="nav-text">Palindromes uoj 103</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Split-the-sequence-uoj-104"><span class="nav-number">2.</span> <span class="nav-text">Split the sequence uoj 104</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Beads-and-wires-uoj-105"><span class="nav-number">3.</span> <span class="nav-text">Beads and wires uoj 105</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hamsterwk</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    
+
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2132857"></script>
+      <!-- UY END -->
+    
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

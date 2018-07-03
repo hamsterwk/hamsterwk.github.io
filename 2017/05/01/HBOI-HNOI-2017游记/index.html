@@ -1,0 +1,773 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="游记," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="填一个两星期前的坑ovo两天过得还算顺利吧（大雾）Day0：试机，练了两个板子，后缀数组敲错，求割点也因为犯二敲错，顿时感觉此为不祥之兆。晚上2000就睡着了，别问我为什么睡这么早，第二天居然要比上学还起早半小时TATDay1：出发前荣阿姨亲临助威，感动+10086QwQ，在车上也没睡着，就是眼睁睁地看着外面的景色从车窗边闪过（这貌似叫发呆233333）。       哇，我前面是Sengxian">
+<meta name="keywords" content="游记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HBOI(HNOI)2017游记">
+<meta property="og:url" content="http://yoursite.com/2017/05/01/HBOI-HNOI-2017游记/index.html">
+<meta property="og:site_name" content="某仓鼠的OI后院">
+<meta property="og:description" content="填一个两星期前的坑ovo两天过得还算顺利吧（大雾）Day0：试机，练了两个板子，后缀数组敲错，求割点也因为犯二敲错，顿时感觉此为不祥之兆。晚上2000就睡着了，别问我为什么睡这么早，第二天居然要比上学还起早半小时TATDay1：出发前荣阿姨亲临助威，感动+10086QwQ，在车上也没睡着，就是眼睁睁地看着外面的景色从车窗边闪过（这貌似叫发呆233333）。       哇，我前面是Sengxian">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-05-18T04:05:47.918Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HBOI(HNOI)2017游记">
+<meta name="twitter:description" content="填一个两星期前的坑ovo两天过得还算顺利吧（大雾）Day0：试机，练了两个板子，后缀数组敲错，求割点也因为犯二敲错，顿时感觉此为不祥之兆。晚上2000就睡着了，别问我为什么睡这么早，第二天居然要比上学还起早半小时TATDay1：出发前荣阿姨亲临助威，感动+10086QwQ，在车上也没睡着，就是眼睁睁地看着外面的景色从车窗边闪过（这貌似叫发呆233333）。       哇，我前面是Sengxian">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/05/01/HBOI-HNOI-2017游记/"/>
+
+
+
+
+
+  <title> HBOI(HNOI)2017游记 | 某仓鼠的OI后院 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?f9bfef867c3d97738b815bb8ed77300f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">某仓鼠的OI后院</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">欢迎来玩qwq</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-desktop"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/01/HBOI-HNOI-2017游记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hamsterwk">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/hamster.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="某仓鼠的OI后院">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                HBOI(HNOI)2017游记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-01T11:27:15+08:00">
+                2017-05-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/生活/" itemprop="url" rel="index">
+                    <span itemprop="name">生活</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>填一个两星期前的坑ovo<br>两天过得还算顺利吧（大雾）<br>Day0：试机，练了两个板子，后缀数组敲错，求割点也因为犯二敲错，顿时<br>感觉此为不祥之兆。晚上2000就睡着了，别问我为什么睡这么早，第二天居然要比上学还起早半小时TAT<br>Day1：出发前荣阿姨亲临助威，感动+10086QwQ，在车上也没睡着，就是眼睁睁地看着外面的景色从车窗边闪过（这貌似叫发呆233333）。<br>       哇，我前面是Sengxian，他前面是yp，一下子前面好多大牛啊QwQ<br>    拿到题目，一口气写对密码。先花20分钟大致扫了一眼三个题：T1“似乎”可以维护一下深度，用一些东西，T2除了暴力无他思路，T3也没看出什么除了$O(n^2m)$ 以外的好法子，于是尝试干T1，但由于细节过于复杂，调了很长时间，当时的情况就是：改一个地方-&gt;rand一组数据-&gt;又错一次的循环（昨天试机的“不祥之兆”就是这个？），这样子就耗了两个小时。当时就有点慌张，连忙转手打好2,3的暴力，在打3的时候，突然就开脑洞想到展开式子，然后得到70分做法，对拍若干分钟之后，大概还有两个小时，于是我全力干T1，又一次陷入循环。不过人品好的是，我“调出来”了，对拍结果终于“正常”了。我记得很清楚，当时长吁一口气（23333）。<br>    返程路上，听说有一位高一学弟能拿120，其他人估分都挺不错。但是蔡爷爷一语不发，不知道为什么（明明最后进队了）。<br>    司机为什么要走东湖边上啊，走走停停，有一段我几乎要晕车了TAT。<br>    一到家我就躺倒在床上，但没过半小时我教练打过来一个电话，信号质量+迷迷糊糊让我只听到这几个字：</p>
+<pre><code>“你怎么……三个题……都是零分啊”
+</code></pre><p>  我当时真的是“蹦”了起来，“都零分？？？”，于是那边又把话复述了一遍，这回我听清楚了：</p>
+<pre><code>“我是说你怎么第三个题没分，湖北省都是零分啊”
+</code></pre><p>此时我也清醒了不少，湖北省都是零分啊，那应该会重测吧。我回复道。同时也得知了T1 70分 T2 30分的情况（等等，T1 70是什么鬼）<br>    不久我拿到了数据和源代码，我很快发现了问题：是我splay zig-zag双旋那个函数炸了。。。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">splay</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> &amp;rt)</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(x!=rt)&#123;</span><br><span class="line">		<span class="keyword">int</span> y=fa[x];</span><br><span class="line">		<span class="keyword">if</span>(y!=rt)&#123;</span><br><span class="line">			<span class="keyword">if</span>(son(x)!=son(y))rot(y,rt);</span><br><span class="line">			<span class="keyword">else</span> rot(x,rt);			</span><br><span class="line">		&#125;</span><br><span class="line">		rot(x,rt);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这一转反，我的splay拿命平衡，于是TLE30分。<br>好不甘心啊。<br>又过了一个多小时，教练又告诉我一个消息：我是Day1 的湖北Rank1。<br>？？？<br>Sengxian前面100+30，我前面70+30，但T3我的那个脑洞给我带来了额外的40分，于是我还反超了。。。<br>YP的FFT干掉T3，成为全HB唯一A掉此题的玩家<br>Sengxian也是全场唯一AC了T1的选手，剩下的，一个splay转反的zz得了70分，一个不明原因写炸了的chrt的了30分，然后就清一色地拿了暴力20分。<br>据说还有因为没删调试语句导致AC变爆零的大佬，心疼一秒…<br>蔡爷爷拿完了所有的暴力分，但也仅此而已，所以他排名并不靠前（flag）。<br>高一有位大佬Day1分数比和NOIP全程分数一样啊，就是那个估120的大佬QAQ<br>虽然写炸了一些东西，不过至少可以安心睡觉了。<br>    Day2：<br>还是非要0530起早前往学校集合。高一学弟纷纷询问成绩，蔡爷爷一言不发（后来据说此时他还不知道成绩。。。），我给每位同学分发了一块巧克力，然后就出发了。<br>到了那里碰到了YP，以及YLZX的教练，然后，我校，YLZX的人全部挤到了一部电梯里。</p>
+<pre><code>“你们学校那只仓鼠昨天很厉害啊”
+“那是，人家是有实力的啊”
+</code></pre><p>我校教练此处一口毒奶。<br>再次一口气输入密码，看题。今天确实难度大一些，T1一看，好像记忆化“可以”搜出前40分啊，那就打！于是整了个六维记忆化搜索，调约40分钟结束。T2，计算几何？先放着，T3，好像是个数学题，那就推下式子？<br>于是一个小时过去了，毫无进展。<br>“为什么要膜合数啊”（摔桌子.jpg）<br>顾全大局，30分走人。<br>剩下的时间，干T2的30分，计算几何各种不服，各种调试，各种特判，才整过去。<br>今天真是好惨啊，我心想。<br>不过大家应该都差不多吧，我又想。<br>下午我们决定留守等待成绩。期间和教练在一个咖啡馆面接了一个现在是初三的网招生。我省真是在越来越强啊，我想。<br>结果出来的时候，真是玄妙。<br>前20分是不符合记忆化搜索的范围的，于是我期望的40分变为了“另外20%的数据”的20分。然而蔡爷爷，以及各位大佬的爆搜都能直接干40分。（我好菜啊.jpg）<br>于是我day2就被众人碾压。<br>回校路上。我们再次接到消息，T2、T3需要重测。<br>？？？，一次省选重测三个题？？？EXM？<br>（后来T2又一次重测，233333）<br>到校之后，终测结果未出，于是我们被拉去搬砖。。。<br>结果终于出来了，我中规中矩地拿到了所有的基本暴力分，蔡爷爷劲啊，全场Rank1啊，40+50（后又终测一次改为60）+30，吊打全湖北啊。<br>Sengxian貌似比蔡爷爷低10分，不过他两天发挥好稳啊。<br>其余不再赘述，总结就是“众大佬将一只仓鼠按在地上吊打”（我菜爆了.jpg）<br>我们连忙开始加权。<br>Sengxian是毋庸置疑的HBOI2017队长了，我因为Day1运气好爬到了Rank2，然后A类就是剩下三位大佬：chrt和HSY的高一大佬（据说此人好多妹子。。。），当然还有YP。<br>蔡爷爷因为3分之差与A类失之交臂。<br>他其实有两次机会抢救。。。NOIPD2T1他忘记取膜了。。。后来他发现（在我简单复述下）省选D1T3的70分他其实很容易拿到，达成两者之一即可有A类。<br>然后，就是二中另一位大佬HXJ，他貌似Day2没发挥到位啊。<br>最后还有一位HSY的大神，NOIP280多来着，但是两天暴力均打的很稳，于是……进队了。。。<br>以上就是HBOI2017的结局。<br>摘要：<br>1.我校一个Day1Rank1，Day2Rank1，真有趣。<br>2.现在湖北初中起步的人越来越多了啊。<br>3.一不小心怒丢50分好不开心。<br>4.心疼HSY，YCYZ，HSEZ等因各种原因为能入队的dalao们<br>5.接下来的日子得好好规划了。。。<br>以上。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/游记/" rel="tag"># 游记</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/30/某仓鼠的OI后院竣工纪念/" rel="next" title="某仓鼠的OI后院竣工纪念">
+                <i class="fa fa-chevron-left"></i> 某仓鼠的OI后院竣工纪念
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/03/NOI2016演练记录/" rel="prev" title="NOI2016演练记录">
+                NOI2016演练记录 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  <div class="comments" id="comments">
+    
+      <div id="uyan_frame"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/hamster.jpg"
+               alt="hamsterwk" />
+          <p class="site-author-name" itemprop="name">hamsterwk</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              爱护仓鼠协会名单：
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/ep1c_heret1c/" title="CBH" target="_blank">CBH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://chrt.github.io" title="chrt" target="_blank">chrt</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mywaythere.lofter.com/" title="mywaythere" target="_blank">mywaythere</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://blog.sengxian.com/" title="sengxian" target="_blank">sengxian</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://owarisunezeko.wordpress.com/" title="nonamenotitle" target="_blank">nonamenotitle</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zjyelizaveta.com/" title="ZJYelizaveta" target="_blank">ZJYelizaveta</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://lyc.xuming.studio/" title="TooYoungTooSimp" target="_blank">TooYoungTooSimp</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+		<embed src="\hamster.swf" width="210" height="140"></embed>
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hamsterwk</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    
+
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2132857"></script>
+      <!-- UY END -->
+    
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
