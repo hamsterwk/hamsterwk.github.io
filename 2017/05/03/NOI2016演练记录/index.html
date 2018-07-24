@@ -87,13 +87,13 @@
 
 
 
-<meta name="description" content="抽两天时间拿了NOI2016原题练习了一遍。原题见下：（附加文件见下方的uoj链接）Day1.pdfDay2.pdf附加文件整合 #Day1 T1：优秀的拆分 Link：优秀的拆分这部分我一年前就有95分了（捂脸逃）CCF给此题的暴力还是很良心的（捂脸逃）正解貌似是后缀数组什么的，反正就5分啊（捂脸逃）那就简单说下我95分怎么做吧。对于测试点1，2，3，4，因为所有字符串都相同，我们使用组合数学可">
+<meta name="description" content="抽两天时间拿了NOI2016原题练习了一遍。原题见下：（附加文件见下方的uoj链接）Day1.pdfDay2.pdf附加文件整合 Day1 T1：优秀的拆分Link：优秀的拆分这部分我一年前就有95分了（捂脸逃）CCF给此题的暴力还是很良心的（捂脸逃）正解貌似是后缀数组什么的，反正就5分啊（捂脸逃）那就简单说下我95分怎么做吧。对于测试点1，2，3，4，因为所有字符串都相同，我们使用组合数学可以求">
 <meta name="keywords" content="NOI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NOI2016演练记录">
 <meta property="og:url" content="http://yoursite.com/2017/05/03/NOI2016演练记录/index.html">
 <meta property="og:site_name" content="某仓鼠的OI后院">
-<meta property="og:description" content="抽两天时间拿了NOI2016原题练习了一遍。原题见下：（附加文件见下方的uoj链接）Day1.pdfDay2.pdf附加文件整合 #Day1 T1：优秀的拆分 Link：优秀的拆分这部分我一年前就有95分了（捂脸逃）CCF给此题的暴力还是很良心的（捂脸逃）正解貌似是后缀数组什么的，反正就5分啊（捂脸逃）那就简单说下我95分怎么做吧。对于测试点1，2，3，4，因为所有字符串都相同，我们使用组合数学可">
+<meta property="og:description" content="抽两天时间拿了NOI2016原题练习了一遍。原题见下：（附加文件见下方的uoj链接）Day1.pdfDay2.pdf附加文件整合 Day1 T1：优秀的拆分Link：优秀的拆分这部分我一年前就有95分了（捂脸逃）CCF给此题的暴力还是很良心的（捂脸逃）正解貌似是后缀数组什么的，反正就5分啊（捂脸逃）那就简单说下我95分怎么做吧。对于测试点1，2，3，4，因为所有字符串都相同，我们使用组合数学可以求">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/NOI2016/RuoZhi.jpg">
 <meta property="og:image" content="http://yoursite.com/images/NOI2016/CaiBaoLe.jpg">
@@ -102,7 +102,7 @@
 <meta property="og:updated_time" content="2017-05-18T04:06:23.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NOI2016演练记录">
-<meta name="twitter:description" content="抽两天时间拿了NOI2016原题练习了一遍。原题见下：（附加文件见下方的uoj链接）Day1.pdfDay2.pdf附加文件整合 #Day1 T1：优秀的拆分 Link：优秀的拆分这部分我一年前就有95分了（捂脸逃）CCF给此题的暴力还是很良心的（捂脸逃）正解貌似是后缀数组什么的，反正就5分啊（捂脸逃）那就简单说下我95分怎么做吧。对于测试点1，2，3，4，因为所有字符串都相同，我们使用组合数学可">
+<meta name="twitter:description" content="抽两天时间拿了NOI2016原题练习了一遍。原题见下：（附加文件见下方的uoj链接）Day1.pdfDay2.pdf附加文件整合 Day1 T1：优秀的拆分Link：优秀的拆分这部分我一年前就有95分了（捂脸逃）CCF给此题的暴力还是很良心的（捂脸逃）正解貌似是后缀数组什么的，反正就5分啊（捂脸逃）那就简单说下我95分怎么做吧。对于测试点1，2，3，4，因为所有字符串都相同，我们使用组合数学可以求">
 <meta name="twitter:image" content="http://yoursite.com/images/NOI2016/RuoZhi.jpg">
 
 
@@ -381,21 +381,23 @@
 
       
         <p>抽两天时间拿了NOI2016原题练习了一遍。<br>原题见下：（附加文件见下方的uoj链接）<br><a href="\pdfs\NOI2016-day1.pdf">Day1.pdf</a><br><a href="\pdfs\NOI2016-day2.pdf">Day2.pdf</a><br><a href="\downloads\NOI2016.zip">附加文件整合</a></p>
-<p>#Day1 T1：优秀的拆分</p>
-<p>Link：<a href="http://uoj.ac/problem/219" target="_blank" rel="noopener">优秀的拆分</a><br>这部分我一年前就有95分了（捂脸逃）<br>CCF给此题的暴力还是很良心的（捂脸逃）<br>正解貌似是后缀数组什么的，反正就5分啊（捂脸逃）<br>那就简单说下我95分怎么做吧。<br>对于测试点1，2，3，4，因为所有字符串都相同，我们使用组合数学可以求解啦。<br>剩下的部分，对原串哈希，然后枚举A，B长度，理论上只要你枚举恰当，甚至都可以过到95分。<br>我至今仍记得当年我跑过2000的数据时的心情。。。</p>
-<p>#Day1 T2：网格<br>Link：<a href="http://uoj.ac/problem/220" target="_blank" rel="noopener">网格</a><br>这题充分说明了我是个ZZ。<br>首先自己手玩一下，可以发现答案只有四种情况：-1，0，1，2。<br>= =<br>对于-1而言，如果原图只有一只跳蚤或者只有两只跳蚤且是相邻的，那就是无解。<br>对于0，排除-1的情况后，我们整个并查集判定一下就好。<br>对于1，枚举填哪一个点，如果填了之后能不联通的话即为答案。<br>排除以上所有情况之后即为2.<br>此外，17，18，19貌似可以手玩？如果C超级小的话。<br>上面的做法，复杂度是$O((nm)^2)$的，可以过前7个点，28分滚粗。。。<br>下午看题解的时候差点没被气死。<br>“天杀的我怎么就没往割点上面想啊啊啊啊啊啊啊啊啊啊啊！”</p>
+<h1 id="Day1-T1：优秀的拆分"><a href="#Day1-T1：优秀的拆分" class="headerlink" title="Day1 T1：优秀的拆分"></a>Day1 T1：优秀的拆分</h1><p>Link：<a href="http://uoj.ac/problem/219" target="_blank" rel="noopener">优秀的拆分</a><br>这部分我一年前就有95分了（捂脸逃）<br>CCF给此题的暴力还是很良心的（捂脸逃）<br>正解貌似是后缀数组什么的，反正就5分啊（捂脸逃）<br>那就简单说下我95分怎么做吧。<br>对于测试点1，2，3，4，因为所有字符串都相同，我们使用组合数学可以求解啦。<br>剩下的部分，对原串哈希，然后枚举A，B长度，理论上只要你枚举恰当，甚至都可以过到95分。<br>我至今仍记得当年我跑过2000的数据时的心情。。。</p>
+<h1 id="Day1-T2：网格"><a href="#Day1-T2：网格" class="headerlink" title="Day1 T2：网格"></a>Day1 T2：网格</h1><p>Link：<a href="http://uoj.ac/problem/220" target="_blank" rel="noopener">网格</a><br>这题充分说明了我是个ZZ。<br>首先自己手玩一下，可以发现答案只有四种情况：-1，0，1，2。<br>= =<br>对于-1而言，如果原图只有一只跳蚤或者只有两只跳蚤且是相邻的，那就是无解。<br>对于0，排除-1的情况后，我们整个并查集判定一下就好。<br>对于1，枚举填哪一个点，如果填了之后能不联通的话即为答案。<br>排除以上所有情况之后即为2.<br>此外，17，18，19貌似可以手玩？如果C超级小的话。<br>上面的做法，复杂度是$O((nm)^2)$的，可以过前7个点，28分滚粗。。。<br>下午看题解的时候差点没被气死。<br>“天杀的我怎么就没往割点上面想啊啊啊啊啊啊啊啊啊啊啊！”</p>
 <p><img src="\images\NOI2016\RuoZhi.jpg" alt=""></p>
 <p>此题如果想到了割点可玩性不就大大提升了吗？？？</p>
 <p><img src="\images\NOI2016\CaiBaoLe.jpg" alt=""></p>
 <p>那么判断1的情况，就是对网格图跑下tarjan，如果有割点即可。。。<br>暴力建图可以得52分。。。几乎翻一倍。。。<br>正解就是在此基础上，把每个点（周围左右两圈）离散化一下。。。<br>我的天啊…后面的离散化我都想到了…为什么想不到割点啊…<br>= =</p>
 <p><img src="\images\NOI2016\Drunk.jpg" alt=""></p>
-<p>#Day1 T3:循环之美<br>Link：<a href="http://uoj.ac/problem/221" target="_blank" rel="noopener">循环之美</a><br>哇，这个题要求的东西好玄妙啊。。。<br>我突然就联想到小学奥数学到过的一个东西：<br>“如果分母既不含因子2，又不含因子5，那么这个分数是个纯循环小数…只含有2，5为不循环小数…除此都是混循环…”<br>那个是十进制下的…不含2和5？<br>貌似是…与10互质？<br>于是我手玩了2进制，和3进制，发现果真如此。<br>2/1虽然整除，但是还是按分母与进制互质算，而且符合题意。。。<br>那题目求的就很简单了（并不），即分子分母互质，然后，分母与进制互质的分子分母数对个数…<br>表示成公式的话如下：<br>$1\leq i\leq n$,$1\leq j \leq m$,$gcd(i,j)=1$且$gcd(j,k)=1$的点对个数。<br>暴力枚举可以过6个点，24分到手。<br>但是做过SDOI2015数表那个题的话，就会发现这个题与此很相像啊。。。<br>考虑n比m略小，我们枚举i，求满足条件的j的个数。<br>对于每个枚举的i，我们求与i*k互质的j的个数即可，两个条件就都顾全了。<br>做数表时，我还没学过莫比乌斯反演，所以我自己想到了一个容斥原理枚举因数的方法，比如，我要求与20互质的数，它有因子2，5，那就是范围内所有数-2的倍数-5的倍数+10的倍数。<br>我们需要$O(2^\omega )$枚举因数的子集，由于$\omega$的实际意义是这个数互不相同的因子个数，所以它并不会很大。<br>2*3*5*7*11*13*17=510510<br>所以这个系数并不高，整体复杂度$O(n*2^\omega )$。<br>实测52分，我觉得可能枚举质因数那里复杂度略高，有空可以尝试改进一下。<br>据说会莫比乌斯反演就可以拿到84分了。。。</p>
-<p>#Day1 总结<br>整体来讲，第一天真暴力。。。<br>感觉最好的就是T3了，感觉最差的是T2（割点想不到真是zz啊）<br>95+28+52=175</p>
-<p>#Day2 T1 区间<br>Link：<a href="http://uoj.ac/problem/222" target="_blank" rel="noopener">区间</a><br>此题依然说明我是个zz。。。<br>想了一个多小时都只有60分暴力，最后还因为没有判无解丢了一个点…<br>其实应该不算太难TAT，我稍后再开贴写个题解？</p>
-<p>#Day2 T2 国王饮水记<br>Link：<a href="http://uoj.ac/problem/223" target="_blank" rel="noopener">国王饮水记</a><br>天啊，我怎么一无所知啊…<br>于是实际做的时候我就直切过去，干了一小时提交答案题之后再回头处理此题= =<br>我只会这个题的特判啊。。。<br>$n\leq 4$的时候暴搜，可以有15分。<br>$k=10^9$的时候，考虑最优方案应该是贪心地排序，从小到大比一号水箱高的时候依次联通，于是就这么整了，拿到了10分。<br>$k=1$的时候，还是排序，从大到小枚举，每次取前k大的，然后最优即可。<br>但是,k=1的时候。。。<br>1.算平均数不加h[1]<br>2.这是源程序自己体会我有多2 。。。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n,&amp;k,&amp;p);</span><br><span class="line">	<span class="keyword">if</span>(n&lt;=<span class="number">4</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		deal1::Main();</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(k==<span class="number">2</span>)deal2::Main();<span class="comment">//k==2 2333333</span></span><br><span class="line">	<span class="keyword">else</span> deal3::Main();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="Day1-T3-循环之美"><a href="#Day1-T3-循环之美" class="headerlink" title="Day1 T3:循环之美"></a>Day1 T3:循环之美</h1><p>Link：<a href="http://uoj.ac/problem/221" target="_blank" rel="noopener">循环之美</a><br>哇，这个题要求的东西好玄妙啊。。。<br>我突然就联想到小学奥数学到过的一个东西：<br>“如果分母既不含因子2，又不含因子5，那么这个分数是个纯循环小数…只含有2，5为不循环小数…除此都是混循环…”<br>那个是十进制下的…不含2和5？<br>貌似是…与10互质？<br>于是我手玩了2进制，和3进制，发现果真如此。<br>2/1虽然整除，但是还是按分母与进制互质算，而且符合题意。。。<br>那题目求的就很简单了（并不），即分子分母互质，然后，分母与进制互质的分子分母数对个数…<br>表示成公式的话如下：<br>$1\leq i\leq n$,$1\leq j \leq m$,$gcd(i,j)=1$且$gcd(j,k)=1$的点对个数。<br>暴力枚举可以过6个点，24分到手。<br>但是做过SDOI2015数表那个题的话，就会发现这个题与此很相像啊。。。<br>考虑n比m略小，我们枚举i，求满足条件的j的个数。<br>对于每个枚举的i，我们求与i*k互质的j的个数即可，两个条件就都顾全了。<br>做数表时，我还没学过莫比乌斯反演，所以我自己想到了一个容斥原理枚举因数的方法，比如，我要求与20互质的数，它有因子2，5，那就是范围内所有数-2的倍数-5的倍数+10的倍数。<br>我们需要$O(2^\omega )$枚举因数的子集，由于$\omega$的实际意义是这个数互不相同的因子个数，所以它并不会很大。<br>2*3*5*7*11*13*17=510510<br>所以这个系数并不高，整体复杂度$O(n*2^\omega )$。<br>实测52分，我觉得可能枚举质因数那里复杂度略高，有空可以尝试改进一下。<br>据说会莫比乌斯反演就可以拿到84分了。。。</p>
+<h1 id="Day1-总结"><a href="#Day1-总结" class="headerlink" title="Day1 总结"></a>Day1 总结</h1><p>整体来讲，第一天真暴力。。。<br>感觉最好的就是T3了，感觉最差的是T2（割点想不到真是zz啊）<br>95+28+52=175</p>
+<h1 id="Day2-T1-区间"><a href="#Day2-T1-区间" class="headerlink" title="Day2 T1 区间"></a>Day2 T1 区间</h1><p>Link：<a href="http://uoj.ac/problem/222" target="_blank" rel="noopener">区间</a><br>此题依然说明我是个zz。。。<br>想了一个多小时都只有60分暴力，最后还因为没有判无解丢了一个点…<br>其实应该不算太难TAT，我稍后再开贴写个题解？</p>
+<h1 id="Day2-T2-国王饮水记"><a href="#Day2-T2-国王饮水记" class="headerlink" title="Day2 T2 国王饮水记"></a>Day2 T2 国王饮水记</h1><p>Link：<a href="http://uoj.ac/problem/223" target="_blank" rel="noopener">国王饮水记</a><br>天啊，我怎么一无所知啊…<br>于是实际做的时候我就直切过去，干了一小时提交答案题之后再回头处理此题= =<br>我只会这个题的特判啊。。。<br>$n\leq 4$的时候暴搜，可以有15分。<br>$k=10^9$的时候，考虑最优方案应该是贪心地排序，从小到大比一号水箱高的时候依次联通，于是就这么整了，拿到了10分。<br>$k=1$的时候，还是排序，从大到小枚举，每次取前k大的，然后最优即可。<br>但是,k=1的时候。。。<br>1.算平均数不加h[1]<br>2.这是源程序自己体会我有多2 。。。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n,&amp;k,&amp;p);</span><br><span class="line">	<span class="keyword">if</span>(n&lt;=<span class="number">4</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		deal1::Main();</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(k==<span class="number">2</span>)deal2::Main();<span class="comment">//k==2 2333333</span></span><br><span class="line">	<span class="keyword">else</span> deal3::Main();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>这种对拍三下就可以发现的问题，以后千万不能再犯了TAT<br>但是，还是有一个很神奇的地方，我其他数据都是按照$k=10^9$来处理，结果多得了16分。。。<br><img src="\images\NOI2016\Test.jpg" alt=""><br>真是2333333啊。。。<br>正解是个好玄学的DP啊…TAT</p>
-<p>#Day2 T3 旷野大计算<br>Link：<a href="http://uoj.ac/problem/224" target="_blank" rel="noopener">旷野大计算</a>、<br>真是良心提答题啊，不虐蒟蒻TAT<br>好多手玩就有好多分了。。。<br>1：手玩不解释。<br>2：手玩不解释。<br>3：把读进来的数乘上个2的300次方，代入到S函数里面，负数变成0，0变成0.5，正数变成1，然后…2333333<br>4：用3的方法得到负数-1正数1，乘法用一个，得到6分。<br>5：手玩不解释。<br>8：是我大开脑洞得到的方法不知怎么就能得8分：<br>$$\frac {a}{10}=\frac {a}{8}-\frac {a}{32}+\frac {a}{128}-\frac {a}{512}+…..$$<br>后来看过题解明白了其奥妙，联想循环之美：<br>$$(0.1)_{10}=(0.0\dot001\dot1)_2$$<br>所以这个式子应该是这么写的…<br>$$\frac {a}{10}=\frac {a}{16}+\frac {a}{32}+\frac {a}{256}+\frac {a}{512}+…..$$<br>其实它们是等价的。。。<br>真是神奇了啊…233333<br>54分到手，居然是得分第3高的题目233333</p>
-<p>#Day2（全部）总结<br>丧心病狂的演习结束了。<br>Day2总分：55+41+54=150<br>总分：175+150=325<br>那么假设我笔试100分能拿到的话，就是425 。<br>这是个什么水平呢？<br>你们自己看吧。。。<a href="\pdfs\NOI2016.pdf">NOI2016获奖名单</a><br>银牌垫底选手啊…要不是那年银牌扩招我还只能Cu收场呢…QAQ<br>Sengxian去年差不多是这个分数啊QAQ（%%%）<br>总结来看，发挥的水平应该算是8成吧，该想到的没完全想到，而且还有许多部分分上的失误。<br>例如D1T2的52分应该想到，估计就是割点部分不熟造成的失误。Day2的T1丢5分很不应该，T2丢掉10分更是活该（谁让你不拍这部分数据的）<br>如果有这部分的分数，应该发挥的更好才对…<br>再加上今年应该不会像这样暴力高分的情况…而且今年的实力应该会强很多啊…TAT<br>总之，接下来应该会是一场硬仗了。。。<br>（全剧终）</p>
+<h1 id="Day2-T3-旷野大计算"><a href="#Day2-T3-旷野大计算" class="headerlink" title="Day2 T3 旷野大计算"></a>Day2 T3 旷野大计算</h1><p>Link：<a href="http://uoj.ac/problem/224" target="_blank" rel="noopener">旷野大计算</a>、<br>真是良心提答题啊，不虐蒟蒻TAT<br>好多手玩就有好多分了。。。<br>1：手玩不解释。<br>2：手玩不解释。<br>3：把读进来的数乘上个2的300次方，代入到S函数里面，负数变成0，0变成0.5，正数变成1，然后…2333333<br>4：用3的方法得到负数-1正数1，乘法用一个，得到6分。<br>5：手玩不解释。<br>8：是我大开脑洞得到的方法不知怎么就能得8分：</p>
+<script type="math/tex; mode=display">\frac {a}{10}=\frac {a}{8}-\frac {a}{32}+\frac {a}{128}-\frac {a}{512}+.....</script><p>后来看过题解明白了其奥妙，联想循环之美：</p>
+<script type="math/tex; mode=display">(0.1)_{10}=(0.0\dot001\dot1)_2</script><p>所以这个式子应该是这么写的…</p>
+<script type="math/tex; mode=display">\frac {a}{10}=\frac {a}{16}+\frac {a}{32}+\frac {a}{256}+\frac {a}{512}+.....</script><p>其实它们是等价的。。。<br>真是神奇了啊…233333<br>54分到手，居然是得分第3高的题目233333</p>
+<h1 id="Day2（全部）总结"><a href="#Day2（全部）总结" class="headerlink" title="Day2（全部）总结"></a>Day2（全部）总结</h1><p>丧心病狂的演习结束了。<br>Day2总分：55+41+54=150<br>总分：175+150=325<br>那么假设我笔试100分能拿到的话，就是425 。<br>这是个什么水平呢？<br>你们自己看吧。。。<a href="\pdfs\NOI2016.pdf">NOI2016获奖名单</a><br>银牌垫底选手啊…要不是那年银牌扩招我还只能Cu收场呢…QAQ<br>Sengxian去年差不多是这个分数啊QAQ（%%%）<br>总结来看，发挥的水平应该算是8成吧，该想到的没完全想到，而且还有许多部分分上的失误。<br>例如D1T2的52分应该想到，估计就是割点部分不熟造成的失误。Day2的T1丢5分很不应该，T2丢掉10分更是活该（谁让你不拍这部分数据的）<br>如果有这部分的分数，应该发挥的更好才对…<br>再加上今年应该不会像这样暴力高分的情况…而且今年的实力应该会强很多啊…TAT<br>总之，接下来应该会是一场硬仗了。。。<br>（全剧终）</p>
 
       
     </div>
@@ -499,8 +501,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/hamster.jpg"
@@ -600,6 +611,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Day1-T1：优秀的拆分"><span class="nav-number">1.</span> <span class="nav-text">Day1 T1：优秀的拆分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Day1-T2：网格"><span class="nav-number">2.</span> <span class="nav-text">Day1 T2：网格</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Day1-T3-循环之美"><span class="nav-number">3.</span> <span class="nav-text">Day1 T3:循环之美</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Day1-总结"><span class="nav-number">4.</span> <span class="nav-text">Day1 总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Day2-T1-区间"><span class="nav-number">5.</span> <span class="nav-text">Day2 T1 区间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Day2-T2-国王饮水记"><span class="nav-number">6.</span> <span class="nav-text">Day2 T2 国王饮水记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Day2-T3-旷野大计算"><span class="nav-number">7.</span> <span class="nav-text">Day2 T3 旷野大计算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Day2（全部）总结"><span class="nav-number">8.</span> <span class="nav-text">Day2（全部）总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -778,6 +805,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src=""></script>
+  
+
 
   
 

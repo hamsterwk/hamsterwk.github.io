@@ -87,13 +87,13 @@
 
 
 
-<meta name="description" content="这是本博客第一篇正经学术贴（严肃脸）  干了三个小时，对后缀自动机有了一点清晰的认识（板子稍后再动手），留存记录，以防止忘光QAQ （建议阅读者对AC自动机有一定认识） 参考资料： WJMZMBR于WC 2012的讲稿 chrt的博客 后缀自动机 #Q：什么是自动机？可以识别一类字符串的机器模型？把字符串丢进去就能识别什么的。有限状态自动机就是识别的串数量有限的自动机。自动机由五个部分组成，alp">
+<meta name="description" content="这是本博客第一篇正经学术贴（严肃脸）  干了三个小时，对后缀自动机有了一点清晰的认识（板子稍后再动手），留存记录，以防止忘光QAQ （建议阅读者对AC自动机有一定认识） 参考资料： WJMZMBR于WC 2012的讲稿 chrt的博客 后缀自动机 Q：什么是自动机？可以识别一类字符串的机器模型？把字符串丢进去就能识别什么的。有限状态自动机就是识别的串数量有限的自动机。自动机由五个部分组成，alph">
 <meta name="keywords" content="字符串">
 <meta property="og:type" content="article">
 <meta property="og:title" content="后缀自动机（SAM）学习笔记">
 <meta property="og:url" content="http://yoursite.com/2017/05/04/后缀自动机-学习笔记/index.html">
 <meta property="og:site_name" content="某仓鼠的OI后院">
-<meta property="og:description" content="这是本博客第一篇正经学术贴（严肃脸）  干了三个小时，对后缀自动机有了一点清晰的认识（板子稍后再动手），留存记录，以防止忘光QAQ （建议阅读者对AC自动机有一定认识） 参考资料： WJMZMBR于WC 2012的讲稿 chrt的博客 后缀自动机 #Q：什么是自动机？可以识别一类字符串的机器模型？把字符串丢进去就能识别什么的。有限状态自动机就是识别的串数量有限的自动机。自动机由五个部分组成，alp">
+<meta property="og:description" content="这是本博客第一篇正经学术贴（严肃脸）  干了三个小时，对后缀自动机有了一点清晰的认识（板子稍后再动手），留存记录，以防止忘光QAQ （建议阅读者对AC自动机有一定认识） 参考资料： WJMZMBR于WC 2012的讲稿 chrt的博客 后缀自动机 Q：什么是自动机？可以识别一类字符串的机器模型？把字符串丢进去就能识别什么的。有限状态自动机就是识别的串数量有限的自动机。自动机由五个部分组成，alph">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/SAM/simpleTrie.png">
 <meta property="og:image" content="http://yoursite.com/images/SAM/simpleTrieWithID.png">
@@ -103,7 +103,7 @@
 <meta property="og:updated_time" content="2017-05-18T04:06:31.433Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="后缀自动机（SAM）学习笔记">
-<meta name="twitter:description" content="这是本博客第一篇正经学术贴（严肃脸）  干了三个小时，对后缀自动机有了一点清晰的认识（板子稍后再动手），留存记录，以防止忘光QAQ （建议阅读者对AC自动机有一定认识） 参考资料： WJMZMBR于WC 2012的讲稿 chrt的博客 后缀自动机 #Q：什么是自动机？可以识别一类字符串的机器模型？把字符串丢进去就能识别什么的。有限状态自动机就是识别的串数量有限的自动机。自动机由五个部分组成，alp">
+<meta name="twitter:description" content="这是本博客第一篇正经学术贴（严肃脸）  干了三个小时，对后缀自动机有了一点清晰的认识（板子稍后再动手），留存记录，以防止忘光QAQ （建议阅读者对AC自动机有一定认识） 参考资料： WJMZMBR于WC 2012的讲稿 chrt的博客 后缀自动机 Q：什么是自动机？可以识别一类字符串的机器模型？把字符串丢进去就能识别什么的。有限状态自动机就是识别的串数量有限的自动机。自动机由五个部分组成，alph">
 <meta name="twitter:image" content="http://yoursite.com/images/SAM/simpleTrie.png">
 
 
@@ -383,21 +383,21 @@
       
         <pre><code>这是本博客第一篇正经学术贴（严肃脸）
 </code></pre><p> 干了三个小时，对后缀自动机有了一点清晰的认识（板子稍后再动手），留存记录，以防止忘光QAQ<br> （建议阅读者对AC自动机有一定认识）<br> 参考资料：<br> WJMZMBR于WC 2012的讲稿<br> chrt的博客 <a href="https://chrt.github.io/2017/04/21/suffix-automaton/%20%E2%80%9C%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA%E2%80%9D" target="_blank" rel="noopener">后缀自动机</a></p>
-<p>#Q：什么是自动机？<br>可以识别一类字符串的机器模型？把字符串丢进去就能识别什么的。<br>有限状态自动机就是识别的串数量有限的自动机。<br>自动机由五个部分组成，alpha：字符集，state：状态集合，init：初始状态，end：结束状态集合，trans：状态转移函数。<br>不妨令trans(s,ch)表示当前状态是s，在读入字符ch之后，所到达的状态。<br>如果trans(s,ch)这个转移不存在，为了方便，不妨设其为null，同时null只能转移到null。<br>null表示不存在的状态。<br>同时令trans(s,str)表示当前状态是s，在读入字符串str之后，所到达的状态。<br>————以上来自WJMZMBR的讲稿<br>直白一点说，就是一张图，每个点代表一种状态（以下统称点为状态），每条边代表的就是一种状态的转移（即当前字符），那从起始状态出发，到达结束状态走的路径就代表一种“可识别”的字符串。<br>联想一下AC自动机QwQ</p>
-<p>#Q: 什么是后缀自动机呢？<br>顾名思义，就是按照上面的模式，能识别一个串的所有后缀的自动机。<br>AC自动机就是一部能识别所有添加到trie树里面的串的自动机。</p>
+<h1 id="Q：什么是自动机？"><a href="#Q：什么是自动机？" class="headerlink" title="Q：什么是自动机？"></a>Q：什么是自动机？</h1><p>可以识别一类字符串的机器模型？把字符串丢进去就能识别什么的。<br>有限状态自动机就是识别的串数量有限的自动机。<br>自动机由五个部分组成，alpha：字符集，state：状态集合，init：初始状态，end：结束状态集合，trans：状态转移函数。<br>不妨令trans(s,ch)表示当前状态是s，在读入字符ch之后，所到达的状态。<br>如果trans(s,ch)这个转移不存在，为了方便，不妨设其为null，同时null只能转移到null。<br>null表示不存在的状态。<br>同时令trans(s,str)表示当前状态是s，在读入字符串str之后，所到达的状态。<br>————以上来自WJMZMBR的讲稿<br>直白一点说，就是一张图，每个点代表一种状态（以下统称点为状态），每条边代表的就是一种状态的转移（即当前字符），那从起始状态出发，到达结束状态走的路径就代表一种“可识别”的字符串。<br>联想一下AC自动机QwQ</p>
+<h1 id="Q-什么是后缀自动机呢？"><a href="#Q-什么是后缀自动机呢？" class="headerlink" title="Q: 什么是后缀自动机呢？"></a>Q: 什么是后缀自动机呢？</h1><p>顾名思义，就是按照上面的模式，能识别一个串的所有后缀的自动机。<br>AC自动机就是一部能识别所有添加到trie树里面的串的自动机。</p>
 <p>简单概念讲完了，下面我们步入正题。<br>我们考虑如何构造给定串S的SAM。</p>
-<p>#Part1:Too Simple<br>很容易想到一种simple的构造方法：把S的后缀全部拎出来，建立一个AC自动机如何？<br>图为串“aabbabd”的情况</p>
+<h1 id="Part1-Too-Simple"><a href="#Part1-Too-Simple" class="headerlink" title="Part1:Too Simple"></a>Part1:Too Simple</h1><p>很容易想到一种simple的构造方法：把S的后缀全部拎出来，建立一个AC自动机如何？<br>图为串“aabbabd”的情况</p>
 <p><img src="\images\SAM\simpleTrie.png" alt=""></p>
 <p>吼啊，但是考虑下复杂度？<br>n个后缀都要插入到一个trie树上面，空间复杂度是$O(n^2)$ 的，有点坑啊。<br>我们考虑下优化。</p>
-<p>#part2:优化<br>回到我们一开始的要求，我们要求这个自动机能“识别所有后缀”。<br>如果记$Reg(x)$为：以状态x为起点能识别的所有串的集合，对应到图中就是这个点走下去能到到达的所有终点。那么根据定义，它能包含一些后缀就行了。<br>而且很显然，如果存在$Reg(x)=Reg(y)$ ，那么状态x与状态y就是等价的，可以合并为一个状态。<br>那么，哪些状态可以合并呢？<br>考虑状态的实际意义：从起点出发，到达一个状态，这条路径代表的就是一个S的子串。<br>回到那一棵暴力trie树看看：</p>
+<h1 id="part2-优化"><a href="#part2-优化" class="headerlink" title="part2:优化"></a>part2:优化</h1><p>回到我们一开始的要求，我们要求这个自动机能“识别所有后缀”。<br>如果记$Reg(x)$为：以状态x为起点能识别的所有串的集合，对应到图中就是这个点走下去能到到达的所有终点。那么根据定义，它能包含一些后缀就行了。<br>而且很显然，如果存在$Reg(x)=Reg(y)$ ，那么状态x与状态y就是等价的，可以合并为一个状态。<br>那么，哪些状态可以合并呢？<br>考虑状态的实际意义：从起点出发，到达一个状态，这条路径代表的就是一个S的子串。<br>回到那一棵暴力trie树看看：</p>
 <p><img src="\images\SAM\simpleTrieWithID.png" alt=""></p>
-<p>假如我们从0号出发，依次经过点0-1-2，我们就会得到一个子串“ba”，而如果是走0-1-3-4，得到的子串就是“bba”。<br>我们注意到，从2、4接下来能走到的部分是完全一样的，我们便可以说：$Reg(2)=Reg(4)$。即，这两个节点是可合并的。<br>我们还注意到，由于最终状态就是一个后缀，所以当前状态出发能到达的后缀，一定与<strong>到达当前状态</strong>后子串的位置有关（因为一个后缀有唯一对应的起始位置），如上图，从0节点走到4号节点与2号节点后，子串“ba”与“bba”对应的结束位置都是4（从0开始计数），那么以2，4起点，能到达的终点就是从4开始的后缀，而对于节点5而言，子串“a”的结束位置有三个：{0,1,4}，所以从它出发，可以到达从0,1,4开始的后缀。<br>所以，对于每个状态x，我们只需记录从起点出发到达这里代表的子串在原串里的出现位置即可知道它的$Reg(x)$ 。<br>我们定义这个节点对应的子串结束位置的集合为$Right(x)$，如上图中，$Right(5)={0,1,4}$,$Right(2)=Right(4)={4}$。<br>由于前文提及，$Reg(x)$只和$Right(x)$有关，那么对于所有的$Right(x)$相等的点，我们就可以合并。<br>下面列举了部分子串的集合，每个子串在trie树中都对应了一个状态：<br>a: 0,1,4<br>b: 2,3,5<br>d: 6<br>aa: 1<br>bb: 3<br>ab: 2,5<br>……<br>那么根据上文，我们把每个状态按照right集合分类<br>如下图，颜色相同的状态表示他们有相同的right。</p>
+<p>假如我们从0号出发，依次经过点0-1-2，我们就会得到一个子串“ba”，而如果是走0-1-3-4，得到的子串就是“bba”。<br>我们注意到，从2、4接下来能走到的部分是完全一样的，我们便可以说：$Reg(2)=Reg(4)$。即，这两个节点是可合并的。<br>我们还注意到，由于最终状态就是一个后缀，所以当前状态出发能到达的后缀，一定与<strong>到达当前状态</strong>后子串的位置有关（因为一个后缀有唯一对应的起始位置），如上图，从0节点走到4号节点与2号节点后，子串“ba”与“bba”对应的结束位置都是4（从0开始计数），那么以2，4起点，能到达的终点就是从4开始的后缀，而对于节点5而言，子串“a”的结束位置有三个：{0,1,4}，所以从它出发，可以到达从0,1,4开始的后缀。<br>所以，对于每个状态x，我们只需记录从起点出发到达这里代表的子串在原串里的出现位置即可知道它的$Reg(x)$ 。<br>我们定义这个节点对应的子串结束位置的集合为$Right(x)$，如上图中，$Right(5)=\{0,1,4\}$,$Right(2)=Right(4)=\{4\}$。<br>由于前文提及，$Reg(x)$只和$Right(x)$有关，那么对于所有的$Right(x)$相等的点，我们就可以合并。<br>下面列举了部分子串的集合，每个子串在trie树中都对应了一个状态：<br>a: 0,1,4<br>b: 2,3,5<br>d: 6<br>aa: 1<br>bb: 3<br>ab: 2,5<br>……<br>那么根据上文，我们把每个状态按照right集合分类<br>如下图，颜色相同的状态表示他们有相同的right。</p>
 <p><img src="\images\SAM\simpleTrieWithcolor.png" alt=""></p>
 <p>然后合并，结果如下：</p>
 <p><img src="\images\SAM\sam.png" alt=""></p>
 <p>这就是我们最后得到的SAM了O$\omega$O</p>
-<p>#Part3:证明<br>这么优化了之后，空间是线性的。<br>如何证明？<br>5.4青年节前来填坑~<br>对于两个不同的状态a,b，它们代表的子串必然不相同。<br>如果它们的right集合存在交集说明什么呢？<br>它们的子串存在结束位置相同。这表示必然存在其中一个是另一个的后缀，因为在这个位置同时出现了a,b串的结尾。所以，right集合如果有交集，必然是包含关系。<br>即任意两个状态之间的关系只有两种：相离与包含。<br>任意两个<strong>不同</strong>的right集合也只有两种关系：相离和<strong>真</strong>包含。<br>那么这种集合之间的包含关系，我们可以看成一个树，其中祖先包含它的所有儿子，这棵树我们称为“parent树”。<br>例如：“aabbabd”的包含关系如下：<br><img src="\images\SAM\ParentTree.png" alt=""><br>由于，叶子的right集合一定大小为1，所以总共有n个叶子，因而整棵树的节点个数是线性的。<br>而最终的SAM的节点个数，就是这棵树的节点个数。<br>对于状态转移而言，我们对SAM建立一棵生成树，那么其叶子节点一定代表一个后缀。对于非树边，其也对应着叶子的唯一后缀，所以也是线性的。</p>
-<p>#Part4:实现<br>代码其实很短，原理上面也给出了。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> in[<span class="number">1010</span>][<span class="number">26</span>],fa[<span class="number">1010</span>],mx[<span class="number">1010</span>];</span><br><span class="line"><span class="keyword">int</span> nn,last;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;<span class="comment">//每次添加一个值为x</span></span><br><span class="line">	<span class="keyword">int</span> p=last,np=++nn;</span><br><span class="line">	mx[np]=mx[p]+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(~p&amp;&amp;!in[p][x])</span><br><span class="line">		in[p][x]=np,p=fa[p];</span><br><span class="line">	<span class="keyword">if</span>(p==<span class="number">-1</span>)<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">int</span> q=in[p][x];</span><br><span class="line">	<span class="keyword">if</span>(mx[q]==mx[p]+<span class="number">1</span>)fa[np]=q;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> nq=++nn;mx[nq]=mx[p]+<span class="number">1</span>;</span><br><span class="line">		fa[nq]=fa[q];</span><br><span class="line">		fa[np]=fa[q]=nq;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">26</span>;i++)in[nq][i]=in[q][i];</span><br><span class="line">		<span class="keyword">while</span>(~p&amp;&amp;in[p][x]==q)in[p][x]=nq,p=fa[p];</span><br><span class="line">	&#125;last=np;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="Part3-证明"><a href="#Part3-证明" class="headerlink" title="Part3:证明"></a>Part3:证明</h1><p>这么优化了之后，空间是线性的。<br>如何证明？<br>5.4青年节前来填坑~<br>对于两个不同的状态a,b，它们代表的子串必然不相同。<br>如果它们的right集合存在交集说明什么呢？<br>它们的子串存在结束位置相同。这表示必然存在其中一个是另一个的后缀，因为在这个位置同时出现了a,b串的结尾。所以，right集合如果有交集，必然是包含关系。<br>即任意两个状态之间的关系只有两种：相离与包含。<br>任意两个<strong>不同</strong>的right集合也只有两种关系：相离和<strong>真</strong>包含。<br>那么这种集合之间的包含关系，我们可以看成一个树，其中祖先包含它的所有儿子，这棵树我们称为“parent树”。<br>例如：“aabbabd”的包含关系如下：<br><img src="\images\SAM\ParentTree.png" alt=""><br>由于，叶子的right集合一定大小为1，所以总共有n个叶子，因而整棵树的节点个数是线性的。<br>而最终的SAM的节点个数，就是这棵树的节点个数。<br>对于状态转移而言，我们对SAM建立一棵生成树，那么其叶子节点一定代表一个后缀。对于非树边，其也对应着叶子的唯一后缀，所以也是线性的。</p>
+<h1 id="Part4-实现"><a href="#Part4-实现" class="headerlink" title="Part4:实现"></a>Part4:实现</h1><p>代码其实很短，原理上面也给出了。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> in[<span class="number">1010</span>][<span class="number">26</span>],fa[<span class="number">1010</span>],mx[<span class="number">1010</span>];</span><br><span class="line"><span class="keyword">int</span> nn,last;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;<span class="comment">//每次添加一个值为x</span></span><br><span class="line">	<span class="keyword">int</span> p=last,np=++nn;</span><br><span class="line">	mx[np]=mx[p]+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(~p&amp;&amp;!in[p][x])</span><br><span class="line">		in[p][x]=np,p=fa[p];</span><br><span class="line">	<span class="keyword">if</span>(p==<span class="number">-1</span>)<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">int</span> q=in[p][x];</span><br><span class="line">	<span class="keyword">if</span>(mx[q]==mx[p]+<span class="number">1</span>)fa[np]=q;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> nq=++nn;mx[nq]=mx[p]+<span class="number">1</span>;</span><br><span class="line">		fa[nq]=fa[q];</span><br><span class="line">		fa[np]=fa[q]=nq;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">26</span>;i++)in[nq][i]=in[q][i];</span><br><span class="line">		<span class="keyword">while</span>(~p&amp;&amp;in[p][x]==q)in[p][x]=nq,p=fa[p];</span><br><span class="line">	&#125;last=np;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>确实是很短啊<br>下面给出解释。<br>这段代码在线建立了SAM，并维护了两个数组：fa和mx，其中fa表示的是这个状态的节点在Parent树上的祖先对应的节点，mx表示“以此节点为终点的子串的最长长度”<br>首先，我们的当前节点的mx，就是它上一个位置对应的mx+1 。<br>然后，考虑哪些点能实现到x的转移，就是right集合里面有上一个位置的那些节点，其中，last的right集合就只有一个，也就是上一个位置，根据parent树的性质，last的祖先们right集合一定都有这个位置，所以一路向祖先走，并建立边。<br>下面考虑维护fa，也就是parent树上应该在何处插入此节点。<br>我们找到第一个存在in[p][x]的节点，并记in[p][x]为q。<br>如果它的mx就等于p+1的话，q就可以作为我们当前插入的节点的fa。<br>否则新建一个节点nq，让其等价于q，但mx[nq]等于mx[p]+1，并让q成为nq的祖先，然后令当前节点的fa等于nq。<br>可能有些地方我并没有说清楚啊QAQ，泥萌可以看陈老师的论文。。。<br>以上。</p>
 
       
@@ -502,8 +502,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/hamster.jpg"
@@ -603,6 +612,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Q：什么是自动机？"><span class="nav-number">1.</span> <span class="nav-text">Q：什么是自动机？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Q-什么是后缀自动机呢？"><span class="nav-number">2.</span> <span class="nav-text">Q: 什么是后缀自动机呢？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part1-Too-Simple"><span class="nav-number">3.</span> <span class="nav-text">Part1:Too Simple</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#part2-优化"><span class="nav-number">4.</span> <span class="nav-text">part2:优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part3-证明"><span class="nav-number">5.</span> <span class="nav-text">Part3:证明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part4-实现"><span class="nav-number">6.</span> <span class="nav-text">Part4:实现</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -781,6 +806,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src=""></script>
+  
+
 
   
 

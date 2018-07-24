@@ -378,7 +378,7 @@
         <p>填一个两星期前的坑ovo<br>两天过得还算顺利吧（大雾）<br>Day0：试机，练了两个板子，后缀数组敲错，求割点也因为犯二敲错，顿时<br>感觉此为不祥之兆。晚上2000就睡着了，别问我为什么睡这么早，第二天居然要比上学还起早半小时TAT<br>Day1：出发前荣阿姨亲临助威，感动+10086QwQ，在车上也没睡着，就是眼睁睁地看着外面的景色从车窗边闪过（这貌似叫发呆233333）。<br>       哇，我前面是Sengxian，他前面是yp，一下子前面好多大牛啊QwQ<br>    拿到题目，一口气写对密码。先花20分钟大致扫了一眼三个题：T1“似乎”可以维护一下深度，用一些东西，T2除了暴力无他思路，T3也没看出什么除了$O(n^2m)$ 以外的好法子，于是尝试干T1，但由于细节过于复杂，调了很长时间，当时的情况就是：改一个地方-&gt;rand一组数据-&gt;又错一次的循环（昨天试机的“不祥之兆”就是这个？），这样子就耗了两个小时。当时就有点慌张，连忙转手打好2,3的暴力，在打3的时候，突然就开脑洞想到展开式子，然后得到70分做法，对拍若干分钟之后，大概还有两个小时，于是我全力干T1，又一次陷入循环。不过人品好的是，我“调出来”了，对拍结果终于“正常”了。我记得很清楚，当时长吁一口气（23333）。<br>    返程路上，听说有一位高一学弟能拿120，其他人估分都挺不错。但是蔡爷爷一语不发，不知道为什么（明明最后进队了）。<br>    司机为什么要走东湖边上啊，走走停停，有一段我几乎要晕车了TAT。<br>    一到家我就躺倒在床上，但没过半小时我教练打过来一个电话，信号质量+迷迷糊糊让我只听到这几个字：</p>
 <pre><code>“你怎么……三个题……都是零分啊”
 </code></pre><p>  我当时真的是“蹦”了起来，“都零分？？？”，于是那边又把话复述了一遍，这回我听清楚了：</p>
-<pre><code>“我是说你怎么第三个题没分，湖北省都是零分啊”
+<pre><code> “我是说你怎么第三个题没分，湖北省都是零分啊”
 </code></pre><p>此时我也清醒了不少，湖北省都是零分啊，那应该会重测吧。我回复道。同时也得知了T1 70分 T2 30分的情况（等等，T1 70是什么鬼）<br>    不久我拿到了数据和源代码，我很快发现了问题：是我splay zig-zag双旋那个函数炸了。。。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">splay</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> &amp;rt)</span></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(x!=rt)&#123;</span><br><span class="line">		<span class="keyword">int</span> y=fa[x];</span><br><span class="line">		<span class="keyword">if</span>(y!=rt)&#123;</span><br><span class="line">			<span class="keyword">if</span>(son(x)!=son(y))rot(y,rt);</span><br><span class="line">			<span class="keyword">else</span> rot(x,rt);			</span><br><span class="line">		&#125;</span><br><span class="line">		rot(x,rt);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>这一转反，我的splay拿命平衡，于是TLE30分。<br>好不甘心啊。<br>又过了一个多小时，教练又告诉我一个消息：我是Day1 的湖北Rank1。<br>？？？<br>Sengxian前面100+30，我前面70+30，但T3我的那个脑洞给我带来了额外的40分，于是我还反超了。。。<br>YP的FFT干掉T3，成为全HB唯一A掉此题的玩家<br>Sengxian也是全场唯一AC了T1的选手，剩下的，一个splay转反的zz得了70分，一个不明原因写炸了的chrt的了30分，然后就清一色地拿了暴力20分。<br>据说还有因为没删调试语句导致AC变爆零的大佬，心疼一秒…<br>蔡爷爷拿完了所有的暴力分，但也仅此而已，所以他排名并不靠前（flag）。<br>高一有位大佬Day1分数比和NOIP全程分数一样啊，就是那个估120的大佬QAQ<br>虽然写炸了一些东西，不过至少可以安心睡觉了。<br>    Day2：<br>还是非要0530起早前往学校集合。高一学弟纷纷询问成绩，蔡爷爷一言不发（后来据说此时他还不知道成绩。。。），我给每位同学分发了一块巧克力，然后就出发了。<br>到了那里碰到了YP，以及YLZX的教练，然后，我校，YLZX的人全部挤到了一部电梯里。</p>
 <pre><code>“你们学校那只仓鼠昨天很厉害啊”
@@ -766,6 +766,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src=""></script>
+  
+
 
   
 
